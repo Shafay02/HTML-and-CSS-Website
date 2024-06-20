@@ -264,3 +264,26 @@ a {
   margin-top: 2px;
 }
 
+/* Cards */
+
+.card {
+  border-radius: 7px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adjust values as needed */;
+  overflow: hidden;
+}
+
+.card__header,
+.card__body {
+  padding: 2rem 3rem;
+}
+
+.card--primary .card__header {
+  background-color: var(--color-primary);
+  color: #fff;
+}
+
+.card--secondary .card__header {
+  background-color: var(--color-secondary);
+  color: #fff;
+}
+
