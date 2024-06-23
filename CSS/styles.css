@@ -430,3 +430,53 @@ a {
     font-size: 1.6rem;
   }
 }
+
+/* Grids */
+
+.grid {
+  display: grid;
+}
+
+@media screen and (min-width: 768px) {
+  .grid--1x2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Testimonials */
+
+.testimonial {
+  padding: 3rem;
+}
+
+.testimonial__image-container {
+  position: relative;
+}
+
+.testimonial__main-image {
+  width: 100%;
+}
+
+.testimonial__side-image {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 3rem;
+  right: -50px;
+}
+
+div.card.testimonial {
+  overflow: visible;
+}
+
+
+@media screen and (min-width: 768px) {
+  .testimonial .quote,
+  .testimonial .quote__author {
+    font-size: 2.4rem;
+  }
+
+  .testimonial .quote {
+    margin-left: 6rem;
+  }
+}
