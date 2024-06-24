@@ -200,9 +200,9 @@ a {
   color: var(--color-headings);
   border: 2px solid var(--color-headings);
 }
-.btn--outline:hover{
-    background-color: var(--color-headings);
-    color: white;
+.btn--outline:hover {
+  background-color: var(--color-headings);
+  color: white;
 }
 
 .btn--block {
@@ -215,44 +215,43 @@ a {
 }
 
 @media screen and (min-width: 1024px) {
-    .btn{
-        font-size: 1.4rem;
-    }
+  .btn {
+    font-size: 1.4rem;
+  }
 }
 
 /* Input */
 
 .input {
-    border-radius: var(--border-radius);
-    border: none;
-    color: var(--border-color);
-    font-size: 2rem;
-    outline: none;
-    padding: 1.5rem 3.5rem;
+  border-radius: var(--border-radius);
+  border: none;
+  color: var(--border-color);
+  font-size: 2rem;
+  outline: none;
+  padding: 1.5rem 3.5rem;
 }
 
 .input--shadow {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adjust values as needed */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adjust values as needed */
 }
 
 ::placeholder {
-    color: var(--border-color);
+  color: var(--border-color);
 }
 
 @media screen and (min-width: 1024px) {
-    .input {
-        font-size: 1.5rem;
-    }
-    
+  .input {
+    font-size: 1.5rem;
+  }
 }
 
 /* Input Groups */
 
 .input-group {
   align-items: center;
-  background-color: 9e9e9e;
+  background-color: 99ee9e;
   border-radius: var(--border-radius);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adjust values as needed */;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adjust values as needed */
   display: flex;
 }
 
@@ -270,7 +269,7 @@ a {
 }
 
 .input-group .btn:before {
-  content: url('/images/search-2.svg');
+  content: url("/images/search-2.svg");
   margin-right: 0.8rem; /* Adjust spacing between icon and button */
   margin-top: 2px;
 }
@@ -279,7 +278,7 @@ a {
 
 .card {
   border-radius: 7px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adjust values as needed */;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adjust values as needed */
   overflow: hidden;
 }
 
@@ -346,14 +345,14 @@ a {
 }
 
 .plan--primary .plan__header::before {
-  content: url('/images/popular-secondary.svg');
+  content: url("/images/popular-secondary.svg");
   position: absolute;
   top: 0;
   right: 5%;
 }
 
 .plan--secondary .plan__header::before {
-  content: url('/images/popular-primary.svg');
+  content: url("/images/popular-primary.svg");
   position: absolute;
   top: 0;
   right: 5%;
@@ -478,7 +477,6 @@ div.card.testimonial {
   overflow: visible;
 }
 
-
 @media screen and (min-width: 768px) {
   .testimonial .quote,
   .testimonial .quote__author {
@@ -511,7 +509,6 @@ div.card.testimonial {
   margin-top: 0;
   font-size: 3rem;
 }
-
 
 .callout__button {
   align-self: center;
@@ -576,7 +573,6 @@ div.card.testimonial {
 .block {
   --padding-vertical: 6rem;
   padding: var(--padding-vertical) 2rem;
-  
 }
 
 .block__header {
@@ -603,4 +599,86 @@ div.card.testimonial {
 .block--skewed--left {
   padding-bottom: calc(var(--padding-vertical) + 4rem);
   clip-path: polygon(0% 0%, 100% 0%, 100% 88%, 0% 100%);
+}
+
+/* Navigation Bar */
+
+.nav {
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  flex-wrap: wrap;
+}
+
+.nav__logo-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.nav__title {
+  color: white;
+  margin: 0 0 0 1rem;
+}
+
+.nav__icon-wrapper {
+  display: flex;
+  align-items: center;
+  opacity: 0.3;
+  transition: opacity 0.3s;
+}
+
+.nav__icon-wrapper:hover {
+  opacity: 1;
+}
+
+.nav .list {
+  width: 100%;
+  margin: 0;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.3s ease, opacity 0.3s ease;
+}
+
+.nav .list__item {
+  border-bottom: 1px solid white;
+  margin-top: 20px;
+}
+
+.nav .list__item > a {
+  color: rgb(255, 255, 255);
+  opacity: 0.7;
+}
+
+.nav .list__item > a:hover {
+  opacity: 1;
+}
+
+.nav--expanded .list {
+  max-height: 100vh;
+  opacity: 1;
+}
+
+@media screen and (min-width: 768px) {
+  .nav {
+    flex-wrap: nowrap;
+  }
+
+  .nav__icon-wrapper {
+    display: none;
+  }
+
+  .nav .list {
+    display: flex;
+    max-height: none;
+    opacity: 1;
+    width: auto;
+  }
+
+  .nav .list__item {
+    border-bottom: none;
+    padding: 0 1rem;
+    font-size: 1.5rem;
+  }
 }
