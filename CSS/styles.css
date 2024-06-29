@@ -358,6 +358,23 @@ a {
   top: 0;
   right: 5%;
 }
+
+.plan--main {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.60); /* Adjust values as needed */
+  border-radius: 7px;
+}
+
+.plan:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease-out;
+}
+
+.plan--main:hover {
+  transform: scale(1.15);
+  transition: transform 0.3s ease-out;
+}
+
 @media screen and (min-width: 1024px) {
   .plan__name {
     font-size: 1.4rem;
@@ -449,6 +466,9 @@ a {
 @media screen and (min-width: 768px) {
   .grid--1x2 {
     grid-template-columns: repeat(2, 1fr);
+  }
+  .grid--1x3 {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
@@ -734,5 +754,15 @@ div.card.testimonial {
   .block-domain__prices {
     grid-template-columns: repeat(auto-fit, minmax(10rem,1fr));
   }
-  
+}
+
+/* Plans Block */
+
+.block-plans .grid {
+  gap: 8rem 4rem;
+}
+
+.block-plans .card {
+  max-width: 450px;
+  margin: 0 auto;
 }
