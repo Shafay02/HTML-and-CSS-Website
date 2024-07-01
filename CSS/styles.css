@@ -395,6 +395,7 @@ a {
 .media {
   display: flex;
   flex-direction: row;
+  margin-bottom: 2rem;
 }
 
 .media__title {
@@ -406,7 +407,7 @@ a {
 }
 
 .media__image {
-  padding-top: 1rem;
+  padding-top: 3rem;
 }
 
 /* Quotes */
@@ -608,7 +609,9 @@ div.card.testimonial {
   background-color: black;
 }
 
-.block--dark .block__heading {
+.block--dark h1,
+.block--dark h2,
+.block--dark h3 {
   color: white;
 }
 
@@ -790,4 +793,21 @@ div.card.testimonial {
 
 .feature-header {
   margin-bottom: 6rem;
+}
+
+/* Showcase Block */
+
+.block-showcase__image {
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .block--showcased .grid { 
+    grid-template-columns: 50% 50%;
+  }
+  .block-showcase__image {
+    width: auto;
+    max-width: 700px;
+    justify-self: end;
+  }
 }
