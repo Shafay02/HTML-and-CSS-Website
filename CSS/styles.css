@@ -250,7 +250,6 @@ a {
 
 .input-group {
   align-items: center;
-  background-color: 99ee9e;
   border-radius: var(--border-radius);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adjust values as needed */
   display: flex;
@@ -699,12 +698,14 @@ div.card.testimonial {
     max-height: none;
     opacity: 1;
     width: auto;
+    align-items: center;
   }
 
   .nav .list__item {
     border-bottom: none;
     padding: 0 1rem;
     font-size: 1.5rem;
+    margin-top: 0;
   }
 }
 
@@ -814,6 +815,10 @@ div.card.testimonial {
 }
 
 /* Footer */
+
+.footer {
+  padding: 0;
+}
 
 .footer.block--dark {
   background-color: #232323;
